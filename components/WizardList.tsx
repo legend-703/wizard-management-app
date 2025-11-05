@@ -3,7 +3,7 @@
 import React from 'react';
 import { Grid, Typography } from '@mui/material';
 import WizardCard from './WizardCard';
-import { Wizard } from '@/lib/mockWizards';
+import { Wizard } from '@/lib/server/mockWizards';
 
 export default function WizardList({ wizards }: { wizards: Wizard[] }) {
   if (!wizards.length)
