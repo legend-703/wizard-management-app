@@ -1,92 +1,104 @@
-AI-Powered Wizard Builder
+# 🧙‍♂️ AI-Powered Wizard Builder
 
-A modern, interactive Wizard Builder built with Next.js 14, TypeScript, Material UI (MUI), and DnD Kit, featuring AI-assisted content generation for email steps.
+A modern, interactive **Wizard Builder** built with **Next.js 14**, **TypeScript**, **Material UI (MUI)**, and **DnD Kit**, featuring **AI-assisted content generation** for email steps.
 
-This project demonstrates advanced full-stack patterns including drag-and-drop UI, state management via Context API, OpenAI API integration, and dynamic step execution.
+This project demonstrates advanced full-stack patterns including drag-and-drop UIs, state management via the Context API, OpenAI API integration, and dynamic step execution.
 
--Features
+---
 
-Wizard Management
+## ✨ Features
 
-Create, view, and edit multi-step wizards
+### 🧩 Wizard Management
+- Create, view, and edit multi-step wizards  
+- Each wizard has ordered steps with configurable metadata  
 
-Each wizard has ordered steps with configurable metadata
+### 🎛️ Drag & Drop Reordering
+- Reorder wizard steps easily using **DnD Kit**
 
-Drag & Drop Reordering
+### ⚙️ Execution Mode
+- Run the wizard step-by-step  
+- Visual progress tracking for each executed step  
 
-Reorder steps easily using DnD Kit
+### 🕒 Persistent History
+- Automatically tracks wizard progress, completion status, and timestamps  
 
-Execution Mode
+### 🤖 AI-Assisted Content Generation
+- “Ask AI” button in email steps  
+- Generates contextual email content using OpenAI (or mock API)  
 
-Run the wizard step-by-step
+---
 
-Mark progress with visual feedback
+## 🧰 Tech Stack
 
-Persistent History
+| Layer | Technology |
+|-------|-------------|
+| **Frontend** | Next.js 14 (App Router), TypeScript, React 18 |
+| **UI Framework** | Material UI (MUI v5) |
+| **State Management** | React Context API |
+| **Drag & Drop** | DnD Kit |
+| **AI Integration** | OpenAI API (`gpt-4o-mini`) |
+| **Styling** | MUI SX + Emotion |
+| **Routing** | Next.js Dynamic Routes |
+| **Mock Data / API** | Next.js Route Handlers |
 
-Tracks progress, completion, and timestamps in context or storage
+---
 
-AI-Assisted Content Generation
+## ⚙️ Setup Instructions
 
--Tech Stack
-Frontend	Next.js 14 (App Router), TypeScript, React 18
-UI Framework	Material UI (MUI v5)
-State Management	React Context API
-Drag and Drop	DnD Kit
-AI Integration	OpenAI API (gpt-4o-mini)
-Styling	MUI SX + Emotion
-Routing	Next.js Dynamic Routes
-Mock Data / API	Next.js Route Handlers
-
--Setup Instructions
-
-1️.Clone the Repository
+### 1️⃣ Clone the Repository
+```bash
 git clone https://github.com/legend-703/wizard-builder.git
 cd ai-wizard-builder
-
-2️.Install Dependencies
+2️⃣ Install Dependencies
+bash
+Copy code
 npm install
 # or
 yarn install
-
-3️.Set Up Environment Variables
+3️⃣ Configure Environment Variables
 Create a .env.local file in the project root and add:
 
+bash
+Copy code
 OPENAI_API_KEY=your_openai_api_key_here
+🧠 You can get a free API key from OpenAI Platform.
+If no key is provided, the system uses a mock AI response (toggle inside /api/ai/generate-email).
 
-You can get a free API key from OpenAI Platform.
-
-If you don’t have an API key, the system can still run with a mock AI response (you can easily toggle this in /api/ai/generate-email).
-
-4️.Run the Development Server
+4️⃣ Run the Development Server
+bash
+Copy code
 npm run dev
 # or
 yarn dev
+App runs at 👉 http://localhost:3000
 
-Your app will be available at http://localhost:3000
+🚀 How to Use
+Navigate to /wizards to view available wizards
 
--How to Use
+Click a wizard to open details
 
-Go to /wizards to see a list of available wizards.
+Reorder steps via drag-and-drop
 
-Click on any wizard to view its steps.
+Click Execute Wizard to run it step-by-step
 
-Reorder steps by dragging cards up or down.
+For email steps, click “Ask AI” to auto-generate content
 
-Click Execute Wizard to enter step execution mode.
+Execute steps and complete the wizard
 
-For Email Steps, click “Ask AI” to generate body text automatically.
+🧭 Assumptions & Design Decisions
+AI integration is mocked or powered by OpenAI depending on .env configuration
 
-Mark each step as executed and continue until the wizard completes.
+Simple in-memory or context-based persistence (no database)
 
--Conclusion
+Focused on UX flow, interactivity, and realistic integration patterns
 
-This project demonstrates a complete, modern, and extensible Next.js app that combines:
+🏁 Conclusion
+This project demonstrates a complete, modern, and extensible Next.js application combining:
 
 Practical UI/UX design
 
 Realistic AI feature integration
 
-Strong engineering structure for scalability
+Scalable and maintainable engineering structure
 
-Perfect for evaluating skills in React, TypeScript, and AI integration.
+Perfect for showcasing full-stack proficiency in React, TypeScript, and AI integration. 🚀
